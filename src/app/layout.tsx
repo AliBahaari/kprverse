@@ -1,8 +1,11 @@
 import type { Metadata } from 'next'
-import { Space_Grotesk } from 'next/font/google'
+import { Vazirmatn } from 'next/font/google'
 import '../styles/globals.css'
 
-const spaceGrotesk = Space_Grotesk({ subsets: ['latin'] })
+const vazirmatn = Vazirmatn({
+  subsets: ['arabic', 'latin'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={spaceGrotesk.className}>{children}</body>
+      <body className={vazirmatn.className}>{children}</body>
     </html>
   )
 }
